@@ -1,17 +1,17 @@
 import Image from "next/image";
-
+import { Rating } from "@material-tailwind/react";
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-16 flex flex-wrap justify-center items-center">
       <div className="w-1/4 md:w1/4  ">
         <div className="bg-white border border-r-0 rounded-lg rounded-tr-none rounded-br-none  px-8 py-12 ">
-        <div className="mb-10">
+          <div className="mb-10">
             <p className="text-gray-700 ">
               <span className="text-3xl font-bold">$39</span>
               <span className="text-sm text-center">/month</span>
             </p>
           </div>
-
+          
           <h3 className="text-xl font-bold mb-4 text-red-500">Basic License</h3>
 
           <p className="text-[12px]">
@@ -86,17 +86,20 @@ export default function Home() {
       </div>
       <div className="w-1/4 ">
         <div className="bg-white border border-orange-500 rounded-lg  px-8 py-12 h-[640px]">
-        <div className="mb-10">
+          <div className="mb-10">
             <p className="text-gray-700 ">
               <span className="text-3xl font-bold">$60</span>
               <span className="text-sm text-center">/month</span>
             </p>
           </div>
 
-          <h3 className="text-xl font-bold mb-4 text-purple-500">Social License</h3>
+          <h3 className="text-xl font-bold mb-4 text-purple-500">
+            Social License
+          </h3>
 
           <p className="text-[12px]">
-            Unlimited analytics, plans, demographic insights.All you need to grow-up your business
+            Unlimited analytics, plans, demographic insights.All you need to
+            grow-up your business
           </p>
           <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
           <ul className="list-unstyled mt-8">
@@ -162,22 +165,24 @@ export default function Home() {
               UPGRADE TO SOCIAL
             </button>
           </div>
-          
         </div>
       </div>
       <div className="w-1/4 md:w-1/4 ">
         <div className="bg-white border border-l-0 rounded-lg rounded-tl-none rounded-bl-none px-8 py-12 ">
-        <div className="mb-10">
+          <div className="mb-10">
             <p className="text-gray-700 ">
               <span className="text-3xl font-bold">$125</span>
               <span className="text-sm text-center">/month</span>
             </p>
           </div>
 
-          <h3 className="text-xl font-bold mb-4 text-green-500">Marketing License</h3>
+          <h3 className="text-xl font-bold mb-4 text-green-500">
+            Marketing License
+          </h3>
 
           <p className="text-[12px]">
-            Unlock powerful time-saving tools for creating email delivery and collecting marketing data
+            Unlock powerful time-saving tools for creating email delivery and
+            collecting marketing data
           </p>
           <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
           <ul className="list-unstyled mt-8">
