@@ -15,7 +15,7 @@ interface Product {
   category: string;
   thumbnail: string;
   images: string[];
-  discountedPrice: string;
+  discountedPrice: number; // Changed type to number
 }
 
 export default function Category() {
@@ -40,6 +40,13 @@ export default function Category() {
       });
   }, []);
 
+  const truncateDescription = (description: string, maxLength: number) => {
+    if (description.length > maxLength) {
+      return description.substring(0, maxLength) + "...";
+    }
+    return description;
+  };
+
   return (
     <div className="grid grid-cols-4 gap-4">
       {products.map((product) => (
@@ -47,8 +54,8 @@ export default function Category() {
           key={product.id}
           className="rounded overflow-hidden border relative flex flex-col justify-between h-[500px]"
         >
-          <div className="h-1/2  flex justify-center items-center">
-            <img className="w-full h-full " src={product.thumbnail} alt={""} />
+          <div className="h-1/2 flex justify-center items-center">
+            <img className="w-full h-full" src={product.thumbnail} alt={""} />
           </div>
 
           <div className="px-6 py-4 h-1/2 flex flex-col text-sm">
@@ -57,10 +64,13 @@ export default function Category() {
               <span>{product.title}</span>
             </div>
             <div>
-              <p className="text-gray-700 text-sm">{product.description}</p>
+              <p className="text-gray-700 text-sm">
+                {truncateDescription(product.description, 70)}
+              </p>
             </div>
             <div className="w-1">
               <Rating
+                className="mt-2"
                 value={Math.floor(product.rating)}
                 readonly
                 style={{
@@ -80,7 +90,7 @@ export default function Category() {
                 <span className="text-gray-400">/ชิ้น</span>
               </p>
             </div>
-            <div className="flex items-end ">
+            <div className="flex items-end">
               <svg
                 className="h-4 w-4 text-red-500 mt-8 "
                 fill="none"
