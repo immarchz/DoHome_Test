@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-1/4 ">
-        <div className="bg-white border border-orange-500 rounded-lg  px-8 py-12 h-[640px]">
+        <div className="bg-white border border-orange-500 rounded-lg  px-8 py-12 h-[580px]">
           <div className="mb-10">
             <p className="text-gray-700 ">
               <span className="text-3xl font-bold">$60</span>
